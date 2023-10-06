@@ -1,0 +1,46 @@
+.rating
+  display: flex
+  align-items: flex-end
+  font-size: 10px
+  &__body
+    display: flex
+    align-items: center
+    position: relative
+    font-size: 18px
+    &:before
+      display: block
+      content: "★★★★★"
+      opacity: .2
+
+  &__items
+    display: flex
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+  &__item
+    flex: 0 0 20%
+    height: 100%
+    opacity: 0
+
+  &__active
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    overflow: hidden
+    &:before
+      content: "★★★★★"
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      color: #ffc737
+
+  &__value
+    display: none
+

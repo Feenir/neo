@@ -1,0 +1,22 @@
+:root {
+  .header__more-change {
+    --svg-color: #fff
+  }
+
+  .header__item:hover .header__more-change {
+    --svg-color: #00BCBC
+  }
+
+  .header__info-icon-color {
+    --fill-color: #fff
+  }
+
+  .header__info-icon-inner:hover .header__info-icon-color{
+    --fill-color: #009999
+  }
+
+  .header__menu-icon-color {
+    --menu-color: #fff
+  }
+
+}

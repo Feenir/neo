@@ -1,0 +1,73 @@
+.plus
+  @extend .popular
+
+  &__title
+    @extend .popular__title
+
+  &__subtitle
+    @extend .popular__subtitle
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    gap: 20px 24px
+    @media #{$tablet}
+      gap: 18px
+      flex-direction: column
+
+  &__item
+    background-color: $main-light-color
+    padding: 178px 92px 58px 24px
+    width: calc(33.33% - 16px)
+    background-repeat: no-repeat
+    background-position: top 24px left 24px
+    background-size: 144px
+    @media #{$notebook-small}
+      background-size: 100px
+    @media #{$tablet}
+      padding: 108px 24px 30px 24px
+      background-size: 54px
+      background-position: top 36px left 24px
+      width: 100%
+    &--big
+      padding: 90px 300px 96px 24px
+      width: calc(50% - 12px)
+      background-position: right 64px center
+      background-size: 274px
+      @media #{$notebook-small}
+        padding: 70px 240px 76px 24px
+        background-size: 236px
+      @media #{$tablet}
+        width: 100%
+        padding: 108px 24px 30px 24px
+        background-size: 54px
+        background-position: top 36px left 24px
+    &:nth-child(1)
+      background-image: url("../images/plus/1.svg")
+    &:nth-child(2)
+      background-image: url("../images/plus/2.svg")
+      background-size: 160px
+      @media #{$notebook-small}
+        background-size: 168px
+      @media #{$tablet}
+        background-size: 54px
+    &:nth-child(3)
+      background-image: url("../images/plus/3.svg")
+    &:nth-child(4)
+      background-image: url("../images/plus/4.svg")
+      background-size: 110px
+      @media #{$tablet}
+        background-size: 54px
+    &:nth-child(5)
+      background-image: url("../images/plus/5.svg")
+
+  &__item-subtitle
+    margin-bottom: 24px
+
+  &__item-text
+    margin-bottom: 12px
+
+  &__more
+    @include color-text($more-color)
+

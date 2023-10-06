@@ -1,0 +1,133 @@
+.form
+  &__title
+    color: #484848
+    font-size: 24px
+    font-weight: 600
+    line-height: 24px
+    margin-bottom: 24px
+
+  &__label
+    &:not(:last-child)
+      padding-right: 20px
+      @media #{$mobile}
+        padding-right: 0
+        margin-bottom: 28px
+  &__input
+    display: inline-flex
+    padding-bottom: 12px
+    padding-top: 16px
+    border-bottom: 1px solid rgba(72, 72, 72, .5)
+    @media #{$mobile}
+      width: 100%
+      font-size: 14px
+    &::placeholder
+      transition: all .4s
+    &:focus
+      &::placeholder
+        position: relative
+        transform: translateY(-20px)
+        font-size: 12px
+
+  &__label-inner
+    padding-bottom: 22px
+    @media #{$mobile}
+      display: flex
+      flex-direction: column
+      padding-bottom: 28px
+
+  &__textarea-inner
+    padding-bottom: 24px
+
+  &__textarea
+    min-height: 90px
+    border-bottom: 1px solid rgba(72, 72, 72, .5)
+    width: 100%
+
+  &__politic-inner
+    display: flex
+    align-items: center
+    @media #{$mobile}
+      flex-direction: column
+      align-items: flex-start
+
+  &__button
+    @include button-contour-color
+    @include button
+    padding: 28px 40px
+    margin-right: 24px
+    @media #{$mobile}
+      margin-right: 0
+      margin-bottom: 18px
+
+.fake-checkbox
+
+  &__input
+    position: absolute
+    opacity: 0
+    z-index: -10
+    width: 1px
+    height: 1px
+    visibility: hidden
+    pointer-events: none
+    &:checked + .fake-checkbox__checkbox-inner > .fake-checkbox__checkbox
+      background-color: #099
+      border-color: #099
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M10 3L4.5 8.5L2 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      background-position: center
+      background-size: 12px
+      background-repeat: no-repeat
+
+  &__checkbox-inner
+    display: flex
+    align-items: center
+    cursor: pointer
+
+  &__checkbox
+    min-width: 16px
+    height: 16px
+    border: 1px solid rgba(95, 95, 95, 1)
+    margin-right: 10px
+    transition: background-color .4s
+
+  &__text
+    font-size: 12px
+    color: #ADADAD
+    line-height: 1
+
+  &__link
+    color: #099
+
+.popup
+  position: fixed
+  display: none
+  align-items: center
+  justify-content: center
+  top: 0
+  width: 100%
+  height: 100%
+  &.open
+    display: flex
+  &__body
+    position: relative
+    background-color: #F0FFFF
+    padding: 36px 110px 48px 110px
+  & .form__label-inner
+    display: flex
+    flex-direction: column
+  & .form__label
+    padding-right: 0
+  & .form__input
+    width: 100%
+  & .form__politic-inner
+    flex-direction: column
+    gap: 24px
+
+  &__close
+    position: absolute
+    top: 24px
+    right: 24px
+
+
+
+
+

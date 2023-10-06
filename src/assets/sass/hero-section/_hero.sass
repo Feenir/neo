@@ -1,0 +1,111 @@
+.hero
+  position: relative
+  background-image: url("../images/hero/hero-main-back.jpg")
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  max-width: 1920px
+  margin: 0 auto
+  &:before
+    content: ''
+    position: absolute
+    inset: 0
+    background: rgba(0, 0, 0, 0.65)
+    backdrop-filter: blur(2px)
+    pointer-events: none
+
+  &__wrapper
+    position: relative
+    display: flex
+    align-items: flex-start
+    padding-top: 288px
+    padding-bottom: 128px
+    gap: 0 150px
+    @media #{$notebook}
+      gap: 0 100px
+    @media #{$notebook-small}
+      flex-direction: column
+      padding-top: 144px
+      padding-bottom: 100px
+
+  &__title, &__text, &__subtitle,&__icon-text
+    @include color-text(#fff)
+
+  &__subtitle, &__text
+    margin-bottom: 24px
+
+  &__title
+    @media #{$notebook-small}
+      margin-bottom: 36px
+
+  &__subtitle
+    max-width: 676px
+
+  &__text
+    max-width: 408px
+
+  &__button-inner
+    display: flex
+    align-items: stretch
+    gap: 40px
+    margin-bottom: 62px
+    @media #{$tablet}
+      gap: 18px
+    @media #{$mobile}
+      margin-bottom: 90px
+      flex-direction: column
+      align-items: flex-start
+
+  &__icon-wrapper
+    display: flex
+    align-items: flex-start
+    @media #{$mobile-small}
+      flex-direction: column
+      gap: 18px
+
+  &__icon-inner
+    display: flex
+    flex-direction: column
+    @media #{$mobile}
+      align-items: center
+    @media #{$mobile-small}
+      flex-direction: row
+    &:not(:last-child)
+      margin-right: 26px
+      @media #{$mobile}
+        margin-right: 16px
+      @media #{$mobile-small}
+        margin-right: 0
+
+  &__icon-shell
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    background-color: white
+    margin-bottom: 10px
+    @media #{$tablet-small}
+      width: 44px
+      height: 44px
+    @media #{$mobile-small}
+      margin-bottom: 0
+
+  &__icon
+    max-width: 31px
+    max-height: 31px
+    @media #{$tablet-small}
+      max-width: 24px
+      max-height: 24px
+
+  &__icon-text
+    max-width: 185px
+    @media #{$tablet-small}
+      font-size: 12px
+    @media #{$mobile}
+      text-align: center
+      margin-left: 10px
+    @media #{$mobile-small}
+      text-align: left
+

@@ -1,0 +1,84 @@
+.contacts
+  @include section-indentP
+
+  &__wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    @media #{$tablet}
+      flex-direction: column
+      gap: 54px
+
+  &__item
+    &:first-child
+      max-width: 656px
+      @media #{$mobile}
+        max-width: 100%
+        width: 100%
+
+  &__title
+    color: #484848
+    font-size: 64px
+    font-weight: 600
+    line-height: 1.1
+    margin-bottom: 48px
+    @media #{$notebook}
+      font-size: 58px
+      margin-bottom: 40px
+    @media #{$tablet}
+      font-size: 50px
+      margin-bottom: 28px
+    @media #{$mobile}
+      font-size: 42px
+      margin-bottom: 18px
+
+  &__info-wrapper
+    display: inline-flex
+    flex-wrap: wrap
+    gap: 36px
+    margin-bottom: 50px
+    @media #{$mobile}
+      gap: 28px
+
+  &__info-inner
+    display: inline-flex
+    flex-direction: column
+    gap: 36px
+
+  &__info-item
+    color: #ADADAD
+    font-size: 14px
+    font-weight: 500
+    line-height: 1
+    @media #{$mobile}
+      font-size: 12px
+    &:not(:last-child)
+      margin-bottom: 12px
+    &--strong
+      font-size: 18px
+      line-height: 1
+      font-weight: 600
+      color: #5F5F5F
+      @media #{$mobile}
+        font-size: 14px
+
+  &__info-link
+    display: inline-block
+    font-size: 18px
+    line-height: 1
+    color: #5F5F5F
+    font-weight: 600
+    @media #{$mobile}
+      font-size: 14px
+
+  &__ymap
+    @media #{$notebook}
+      max-width: 600px
+    @media #{$tablet}
+      max-width: unset
+      max-height: 430px
+
+
+
+    
+

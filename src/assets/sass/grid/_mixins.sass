@@ -1,0 +1,127 @@
+@mixin h1-title
+  font-size: $h1-font-size
+  line-height: $h1-line-height
+  @media #{$notebook}
+    font-size: $h1-font-size -12
+  @media #{$tablet}
+    font-size: $h1-font-size - 24px
+  @media #{$mobile}
+    font-size: $h1-font-size - 36
+  @media #{$mobile-small}
+    font-size: $h1-font-size - 48
+
+
+
+@mixin h2-title
+  font-size: $h2-font-size
+  line-height: $h2-line-height
+  @media #{$notebook}
+    font-size: $h2-font-size - 12
+  @media #{$mobile-small}
+    font-size: $h2-font-size - 16
+
+@mixin h3-title
+  font-size: $h3-font-size
+  line-height: $h3-line-height
+  @media #{$tablet}
+    font-size: $h3-font-size - 6
+  @media #{$mobile-small}
+    font-size: $h3-font-size - 8
+
+@mixin color-text($color: $main-light-color)
+  color: $color
+
+@mixin tabs-button
+  color: $third-dark-color
+  font-size: $tabs-font-size
+  font-weight: 600
+  line-height: $tabs-line-height
+  transition: color .3s
+  &:hover
+    color: $hover-main-color
+  &:active
+    color: $active-main-color
+
+@mixin button
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: $buttons-font-size
+  font-weight: 600
+  line-height: $buttons-line-height
+  text-transform: uppercase
+  padding: 28px 65px
+  max-width: fit-content
+  @media #{$notebook}
+    padding: 24px 40px
+    font-size: 14px
+
+@mixin button-contour-color
+  background-color: $button-background-main
+  color: $button-color-main
+  transition: background-color .3s, color .3s
+  border: 1px solid $button-background-main
+  &:hover
+    background-color: $button-backgroundHover-main
+    border: 1px solid $button-backgroundHover-main
+  &:hover
+    background-color: $button-backgroundActive-main
+    border: 1px solid $button-backgroundActive-main
+  &:disabled
+    opacity: .6
+
+@mixin button-contour-light
+  background-color: inherit
+  color: $button-color-main
+  transition: background-color .3s, color .3s
+  border: 1px solid $button-color-main
+  padding: 28px 40px
+  &:hover
+    color: $button-color-dark
+    background-color: $button-background-light
+    border: 1px solid $button-background-light
+  &:active
+    color: $button-color-dark
+    background-color: $button-backgroundActive-light
+    border: 1px solid $button-backgroundActive-light
+  &:disabled
+    opacity: .6
+
+@mixin button-contour-dark
+  background-color: inherit
+  color: $button-color-dark
+  transition: background-color .3s, color .3s
+  border: 1px solid $button-color-dark
+  &:hover
+    color: $button-color-main
+    background-color: $button-backgroundHover-dark
+    border: 1px solid $button-backgroundHover-dark
+  &:active
+    background-color: $button-backgroundActive-dark
+    border: 1px solid $button-backgroundActive-dark
+  &:disabled
+    opacity: .6
+
+@mixin link
+  color: $main-light-color
+  font-size: 16px
+  font-weight: 500
+  line-height: 24px
+  transition: color .4s
+  @media #{$notebook-small}
+    font-size: 14px
+  &:hover
+    color: $hover-main-color
+
+@mixin text
+  color: #5F5F5F
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.5
+  @media #{$tablet}
+    font-size: 14px
+
+@mixin section-indentP
+  padding: 96px 0
+  @media #{$tablet}
+    padding: 72px 0

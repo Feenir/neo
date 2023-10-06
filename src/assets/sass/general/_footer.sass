@@ -1,0 +1,50 @@
+.footer
+  margin-bottom: 24px
+
+  & .logo
+    margin-bottom: 24px
+
+  &__wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding-bottom: 24px
+    border-bottom: 1px solid #ADADAD
+    margin-bottom: 24px
+    gap: 36px
+    flex-wrap: wrap
+    @media #{$mobile}
+      flex-direction: column
+
+  &__list
+    width: fit-content
+    &:last-child
+      align-self: flex-end
+      @media #{$mobile}
+        align-self: flex-start
+        margin-top: -18px
+      & .footer__item
+        &:first-child
+          color: #5F5F5F
+          font-weight: 500
+
+  &__item
+    font-size: 18px
+    &:first-child
+      font-weight: 600
+      color: #484848
+    &:not(:first-child)
+      font-weight: 500
+      color: #5F5F5F
+    &:not(:last-child)
+      margin-bottom: 24px
+
+  &__info-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 18px
+
+  &__create
+    white-space: nowrap

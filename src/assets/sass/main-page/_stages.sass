@@ -1,0 +1,123 @@
+.stages
+  @include section-indentP
+  background-color: #232323
+  &__slider-inner
+    display: flex
+    min-width: 0
+
+  &__stage
+    max-height: 416px
+    margin-right: 120px
+    min-width: 100px
+    @media #{$tablet}
+      display: none
+
+  &__slide
+    position: relative
+    color: #FFF
+    font-size: 14px
+    font-weight: 600
+    line-height: 100% 
+    height: 48px!important
+    padding-left: 30px
+    transition: all .4s
+    &:before
+      position: absolute
+      left: 10px
+      content: ''
+      width: 2px
+      background-color: rgba(175, 175, 175, 1)
+      height: 100%
+      transition: height .4s
+    &:after
+      position: absolute
+      content: ''
+      left: 6px
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: #AFAFAF
+    &:last-child
+      &:before
+        height: 0
+    &.swiper-slide-thumb-active
+      height: 212px !important
+      &:after
+        width: 4px
+        height: 4px
+        background-color: #fff
+        border: 6px solid rgba(0, 153, 153, 1)
+        left: 3px
+
+  &__stage-wrapper
+    counter-reset: stage-count
+  &__stage-count
+    counter-increment: stage-count
+    &:before
+      content: counter(stage-count)
+      margin-right: 4px
+
+
+  &__info-slider
+    max-height: 415px
+    margin-bottom: 24px
+    @media #{$tablet}
+      max-height: 100%
+      flex-shrink: unset
+
+
+  &__info-slide
+    display: flex
+    align-items: center
+    @media #{$tablet}
+      &:not(:last-child)
+        margin-bottom: 54px
+
+  &__info-wrapper
+    counter-reset: info-count
+
+.stage
+  display: flex
+  align-items: center
+  gap: 0 50px
+  @media #{$tablet}
+    flex-direction: column
+
+  &__item
+    width: calc(50% - 25px)
+    @media #{$tablet}
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      width: calc(100%)
+    & img
+      @media #{$tablet}
+        height: 234px
+        object-fit: cover
+
+  &__subtitle
+    counter-increment: info-count
+    color: #FFF
+    font-size: 36px
+    font-weight: 600
+    line-height: 36px
+    margin-bottom: 20px
+    @media #{$mobile-small}
+      font-size: 28px
+    &:before
+      content: '0'counter(info-count)
+      margin-right: 8px
+      color: #099
+      
+
+  &__text
+    color: #AFAFAF
+    font-size: 16px
+    font-weight: 400
+    line-height: 119%
+    &:not(:last-child)
+      margin-bottom: 16px
+    @media #{$tablet}
+      margin-bottom: 16px
+        
+
