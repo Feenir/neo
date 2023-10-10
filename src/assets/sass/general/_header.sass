@@ -4,6 +4,13 @@
   left: 0
   width: 100%
   z-index: 100
+  &--black
+    position: static
+    padding-top: 48px
+    & .header__item
+      color: #484848
+    & .header__menu-text
+      color: #484848
 
   &__wrapper
     display: flex
@@ -97,6 +104,9 @@
     border-radius: 50%
     background-color: rgba(255, 255, 255, 0.40)
     transition: background-color .4s
+    &--black
+      background-color: rgba(0, 153, 153, 0.40)
+      border: 1px solid rgba(0, 153, 153, 0.15)
     @media #{$mobile-small}
       width: 20px
       height: 20px
@@ -139,6 +149,10 @@
   &__hidden-link-inner
     display: flex
     justify-content: space-between
+
+  &__info-column
+    display: flex
+    flex-direction: column
 
   &__hidden-link
     @include link

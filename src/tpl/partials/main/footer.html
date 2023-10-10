@@ -50,11 +50,17 @@
       <fieldset class="form__inner">
         <legend class="form__title">Оставить заявку</legend>
         <fieldset class="form__label-inner">
-          <label class="form__label"> <input class="form__input" type="text" placeholder="Имя*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Номер*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Город*"></label>
+          <label class="form__label"><input class="form__input" type="text" required><span class="form__fake-label">Имя*</span></label>
+          <label class="form__label"><input class="form__input" type="tel" required><span class="form__fake-label">Номер*</span></label>
+          <label class="form__label"><input class="form__input" type="text" required><span class="form__fake-label">Город*</span></label>
         </fieldset>
         <fieldset class="form__textarea-inner">
           <label class="form__label form__label--textarea"><textarea class="form__textarea" placeholder="Комментарий"></textarea></label>
         </fieldset>
+        <label class="form__label-file">
+          <input class="form__file" type="file" accept=".pdf,.docx,.txt">
+          <span class="form__fake-file">Добавить файл <span class="form__fake-file-color">.pdf, .docx, .txt</span></span>
+        </label>
         <fieldset class="form__politic-inner">
           <button class="form__button" type="submit">оставить заявку</button>
           <label class="fake-checkbox"> <input class="fake-checkbox__input" type="checkbox" checked> <span class="fake-checkbox__checkbox-inner">
@@ -79,11 +85,13 @@
       <fieldset class="form__inner">
         <legend class="form__title">Оставить заявку</legend>
         <fieldset class="form__label-inner">
-          <label class="form__label"> <input class="form__input" type="text" placeholder="Имя*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Номер*"></label>
+          <label class="form__label"><input class="form__input" type="text" required><span class="form__fake-label">Имя*</span></label>
+          <label class="form__label"><input class="form__input" type="tel" required><span class="form__fake-label">Номер*</span></label>
         </fieldset>
         <fieldset class="form__politic-inner">
           <button class="form__button" type="submit">оставить заявку</button>
-          <label class="fake-checkbox"> <input class="fake-checkbox__input" type="checkbox" checked> <span class="fake-checkbox__checkbox-inner">
+          <label class="fake-checkbox">
+            <input class="fake-checkbox__input" type="checkbox" checked> <span class="fake-checkbox__checkbox-inner">
                       <span class="fake-checkbox__checkbox"></span>
                       <span class="fake-checkbox__text">Я согласен на обработку <a class="fake-checkbox__link" href="#">персональных данных</a></span>
                     </span> </label>

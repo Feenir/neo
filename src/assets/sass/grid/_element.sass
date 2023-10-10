@@ -7,26 +7,41 @@
     margin-bottom: 24px
 
   &__label
+    position: relative
+    margin-bottom: 12px
     &:not(:last-child)
       padding-right: 20px
       @media #{$mobile}
         padding-right: 0
         margin-bottom: 28px
+
+  &__fake-label
+    position: absolute
+    left: 0
+    bottom: 0
+    color: rgba(72, 72, 72, .5)
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.2
+    transition: all .2s
+
+
+
   &__input
     display: inline-flex
-    padding-bottom: 12px
     padding-top: 16px
     border-bottom: 1px solid rgba(72, 72, 72, .5)
     @media #{$mobile}
       width: 100%
+      bottom: 20px
       font-size: 14px
-    &::placeholder
-      transition: all .4s
-    &:focus
-      &::placeholder
-        position: relative
-        transform: translateY(-20px)
-        font-size: 12px
+    &:not(:focus):valid ~ .form__fake-label
+      bottom: 20px
+      font-size: 10px
+      transition: bottom .4s
+    &:focus ~ .form__fake-label
+      bottom: 20px
+      font-size: 10px
 
   &__label-inner
     padding-bottom: 22px
@@ -58,6 +73,29 @@
     @media #{$mobile}
       margin-right: 0
       margin-bottom: 18px
+
+  &__label-file
+    display: block
+    margin-bottom: 24px
+    cursor: pointer
+
+  &__fake-file
+    color: #ADADAD
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+
+  &__fake-file-color
+    color: rgba(0, 153, 153, 1)
+        
+
+  &__file
+    position: absolute
+    height: 1px
+    width: 1px
+    z-index: -10
+    visibility: hidden
+    opacity: 0
 
 .fake-checkbox
 
@@ -111,6 +149,11 @@
     position: relative
     background-color: #F0FFFF
     padding: 36px 110px 48px 110px
+    width: min(100%, 600px)
+    @media #{$notebook}
+      padding: 30px 80px 38px 80px
+    @media #{$tablet}
+      padding: 26px
   & .form__label-inner
     display: flex
     flex-direction: column
@@ -121,11 +164,42 @@
   & .form__politic-inner
     flex-direction: column
     gap: 24px
+  & .form__title
+    text-align: center
+    font-size: 36px
+    @media #{$tablet-small}
+      font-size: 24px
+  & .form__textarea
+    min-height: 72px
 
   &__close
     position: absolute
     top: 24px
     right: 24px
+    cursor: pointer
+
+.bread-crumbs
+  display: flex
+  align-items: flex-start
+  padding-top: 60px
+  &__item
+    display: flex
+    align-items: flex-start
+    color: #484848
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.7
+    &:not(:has(.bread-crumbs__link))
+      color: rgba(0, 153, 153, 1)
+    &:first-child
+      &:before
+        display: none
+    &:not(:first-child)
+      &:before
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg opacity='0.5'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%23484848' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E")
+        margin: 0 10px
+        transform: translateY(-1px)
+
 
 
 

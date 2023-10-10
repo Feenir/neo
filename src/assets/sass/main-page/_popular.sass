@@ -10,7 +10,7 @@
     margin-bottom: 36px
 
   &__inner
-    //max-height: 600px
+    max-height: 620px
     overflow: auto
     padding-right: 16px
     &::-webkit-scrollbar
@@ -21,27 +21,40 @@
       background-color: #FFF  /* цвет плашки */
       border-radius: 20px      /* закругления плашки */
       border: 3px solid #FFF /* padding вокруг плашки */
+    @media #{$tablet}
+      overflow: visible
+      max-height: 100%
+      padding-right: 0
 
-  &__item-inner
+  &__item-wrapper
+    &--last
+      @media #{$tablet}
+        display: none!important
+    &:first-child
       display: grid
-      gap: 12px
-      grid-template-rows:  repeat(2, 1fr)
-      grid-template-columns: repeat(3, 1fr)
-      margin-bottom: 12px
-      @media #{$notebook-small}
+      grid-template-columns: 390px repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      gap: 14px
+      margin-bottom: 14px
+      @media #{$tablet}
         grid-template-columns: repeat(2, 1fr)
       @media #{$tablet-small}
-        grid-template-columns: repeat(1, 1fr)
-      //@media #{$notebook-small}
-      //  grid-template-columns: repeat(2, 1fr)
-      //& .popular__item
-      //  &:first-child
-      //    grid-row: 1 / 3
-      //    @media #{$notebook-small}
-      //      grid-row: auto
-      //  &:last-child
-      //    grid-column: 3 / 3
-      //    grid-row: 3 / -3
+        grid-template-columns: 1fr
+      & .popular__item:first-child
+        grid-row: 1 / 3
+        grid-column: 1 / 1
+        @media #{$tablet}
+          grid-row: auto
+          grid-column: auto
+    &:last-child
+      display: grid
+      grid-template-columns: repeat(2, 1fr) 390px
+      grid-template-rows: repeat(2, 1fr)
+      gap: 12px
+      & .popular__item:last-child
+        grid-row: 1 / 3
+        grid-column: 3 / -1
+
 
   &__item
     position: relative
@@ -69,7 +82,7 @@
       content: ''
       position: absolute
       inset: 0
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 2.6%, rgba(0, 0, 0, 0.82) 100%)
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.82) 100%)
       pointer-events: none
 
   &__item-subtitle
@@ -86,8 +99,15 @@
     @include button-contour-light
 
   &__link
-    display: block
+    display: flex
+    align-items: center
+    justify-content: flex-end
     @include link
     @include color-text(#fff)
+    @include arrow-hover
     margin-top: 48px
     text-align: end
+
+  &__link-icon
+    max-width: 32px
+    max-height: 18px

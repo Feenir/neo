@@ -39,6 +39,14 @@
     &:not(:last-child)
       margin-bottom: 24px
 
+  &__link
+    transition: color .4s
+    &:hover
+      color: #00BCBC
+
+  &__item-link
+    @extend .footer__link
+
   &__info-wrapper
     display: flex
     align-items: flex-start

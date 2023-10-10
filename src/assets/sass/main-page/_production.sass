@@ -4,12 +4,18 @@
   background-size: 100%
   background-position: center
 
+  &__container
+    display: flex
+    align-items: center
+
   &__wrapper
     @extend .about__wrapper
     display: flex
     align-items: center
     position: relative
+    min-height: 760px
     @media #{$tablet}
+      min-height: auto
       align-items: flex-start
 
   &__item
@@ -27,6 +33,13 @@
     visibility: hidden
     z-index: -10
     transition: opacity .3s
+    @media #{$tablet}
+      position: static!important
+      opacity: 1!important
+      visibility: visible!important
+      z-index: 10!important
+      left: 0!important
+      top: 0!important
     &.tabs-pane-show
       position: relative
       display: flex
@@ -43,6 +56,9 @@
   &__tab-title
     @extend .about__title
     font-size: 36px
+    @media #{$tablet-small}
+      font-size: 24px
+      line-height: 1.5
 
 
 
@@ -52,6 +68,10 @@
     align-items: flex-end
     min-width: 390px
     min-height: 160px
+    @media #{$notebook-small}
+      min-width: auto
+    @media #{$tablet}
+      display: none
 
   &__tab-button
     @extend .equipment__tab-button
@@ -67,11 +87,19 @@
 
   &__tab-link
     @extend .about__button
+    &--desk
+      @media #{$tablet}
+        display: none
 
   &__swiper
     max-width: 618px
+    @media #{$notebook}
+      max-width: 358px
     @media #{$tablet}
       max-width: 50vw
+      margin-bottom: 36px
+    @media #{$tablet-small}
+      max-width: 358px
 
 
   &__tab-item
@@ -86,6 +114,9 @@
 
   &__title-color
     color: $more-color
+    white-space: nowrap
+    @media #{$notebook-small}
+      white-space: normal
 
   &__tab-item-inner
     display: flex
@@ -93,12 +124,18 @@
     flex-direction: column
     margin-right: 80px
     max-width: 446px
+    @media #{$notebook-small}
+      margin-right: 30px
+    @media #{$tablet}
+      margin-right: 0
+      max-width: 100%
+
+
 
   &__case
-    position: absolute
     font-weight: 600
-    right: 0
-    bottom: 0
+
+
   &__button
     width: 44px
     height: 44px
@@ -119,3 +156,93 @@
       right: auto
       left: 54px
 
+  &__swiper-control
+    position: relative
+    display: none
+    align-items: center
+    justify-content: space-between
+    @media #{$tablet}
+      display: flex
+
+  &__swiper-number
+    display: flex
+    align-items: center
+
+  &__button-swiper-inner
+    display: flex
+    align-items: center
+
+  &__pagination
+    top: auto!important
+    bottom: -10px
+    border-radius: 13px
+    background: #767676
+    overflow: hidden
+    & .swiper-pagination-progressbar-fill
+      background: #099
+      border-radius: 13px
+
+  &__number
+    color: #5F5F5F
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    &--current
+      color: #099
+
+  &__number-separator
+    @extend .equipment__number
+    color: #099
+
+  &__button-swiper
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%23484848' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    width: 24px
+    height: 24px
+    cursor: pointer
+    transition: opacity .4s
+    &.swiper-button-disabled
+      opacity: .3
+    &--prev
+      transform: rotate(180deg)
+
+  &__control-inner
+    margin-top: 40px
+
+  &__svg-icon
+    max-width: 32px
+    max-height: 18px
+
+  &__button-inner
+    display: none
+    @media #{$tablet}
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 16px
+    @media #{$mobile}
+      align-items: center
+      justify-content: flex-start
+    @media #{$mobile-small}
+      flex-direction: column
+      align-items: flex-start
+
+
+  &__case-inner
+    position: absolute
+    display: flex
+    align-items: center
+    right: 0
+    bottom: 0
+    z-index: 10
+    transition: opacity .4s
+    &:hover
+      opacity: .6
+    &--mob
+      @media #{$tablet}
+        display: none
+    @media #{$tablet}
+      position: static

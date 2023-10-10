@@ -31,6 +31,7 @@ let swiperInfo = new Swiper("[data-info-swiper]", {
     slidesPerView: 1,
     spaceBetween: 10,
     direction: "vertical",
+ 
     mousewheel: true,
     thumbs: {
         swiper: swiperStage,

@@ -1,0 +1,46 @@
+.politic
+  padding-bottom: 96px
+  @media #{$tablet}
+    padding-bottom: 72px
+
+  &__wrapper
+    counter-reset: politic
+
+  & h1
+    color: #484848
+    font-size: 36px
+    font-weight: 600
+    line-height: 36px
+
+  & h2
+    color: #484848
+    font-size: 24px
+    font-weight: 600
+    line-height: 1
+    margin-bottom: 12px
+    counter-increment: politic
+    &:before
+      content: counter(politic)'. '
+
+  & ol
+    padding-left: 0
+    counter-reset: politic-sub
+    margin-bottom: 48px
+    & li
+      counter-increment: politic-sub
+      &:before
+        content: counter(politic)'.'counter(politic-sub)'. '
+  & ul
+    padding-left: 0
+    counter-reset: politic-sub
+    & li
+      &:before
+        content: '-'
+
+  & li, & p
+    color: #5F5F5F
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.5
+
+

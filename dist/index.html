@@ -27,7 +27,12 @@
 <header class="header">
   <div class="container">
     <div class="header__wrapper">
-      <picture><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="header__logo logo" src="./assets/images/logo/logo.png" alt="Логотип"></picture>
+      <a class="header__logo-link" href="#">
+        <picture>
+          <source srcset="./assets/images/logo/logo-white-mobile.svg" media="(max-width: 991px)">
+          <img class="header__logo logo" src="./assets/images/logo/logo-white.svg" alt="Логотип">
+        </picture>
+      </a>
       <nav class="header__navigation">
         <ul class="header__list">
           <li class="header__item"><a class="header__link" href="#">Главная</a></li>
@@ -70,12 +75,19 @@
             </svg>
           </div>
           <div class="header__info-hidden">
-            <p class="header__hidden-text">График работы: будни с 09:00 до 18:00 по МСК:</p>
             <div class="header__hidden-link-inner">
-              <a class="header__hidden-link" href="tel:+78129884358">+7 (812) 988-43-58</a>
-              <a class="header__hidden-link" href="tel:+74950667469">+7 (495) 066-74-69</a>
+              <div class="header__info-column">
+                <p class="header__hidden-text">Email:</p>
+                <a class="header__hidden-link" href="mailto:info@neo-engin.ru">info@neo-engin.ru</a>
+              </div>
+              <div class="header__info-column">
+                <p class="header__hidden-text">Для поставщиков:</p>
+                <a class="header__hidden-link" href="mailto:snab@neo-engin.ru">snab@neo-engin.ru</a>
+              </div>
+
             </div>
           </div>
+
         </div>
       </div>
       <div class="header__menu-inner">
@@ -157,8 +169,8 @@
             <div class="equipment__tabs-module" data-tabs-pane data-copy-parent>
               <div class="equipment__info-inner">
                 <p class="equipment__name">Оборудование</p>
-                <h2 class="equipment__title">Установка для фильтрации и очистки газов <span class="equipment__title-color">Sorption</span></h2>
-                <p class="equipment__text" data-copy-after>Для фильтрации и очистки воздуха от газообразных загрязнений. Может применяться для очистки воздушных выбросов промышленных предприятий.</p>
+                <h2 class="equipment__title">Установка очистки выбросов<span class="equipment__title-color">NE LITE</span></h2>
+                <p class="equipment__text" data-copy-after>NE LITE предназначена для очистки воздуха от вредных газов методом их деструкции (конверсии) до простых химических соединений, безопасных для человека и окружающей среды.</p>
                 <div class="equipment__button-inner">
                   <a class="equipment__button" href="#">подробнее</a>
                   <div class="equipment__fancybox-container" data-fancybox-container>
@@ -169,15 +181,15 @@
                 </div>
               </div>
               <picture class="equipment__img-wrapper" data-img-change>
-                <source srcset="./assets/images/equipment/equipment-test.webp" type="image/webp">
-                <img class="equipment__img" src="./assets/images/equipment/equipment-test.png" alt="Фото оборудование">
+                <source srcset="./assets/images/equipment/equipment-2.webp" type="image/webp">
+                <img class="equipment__img" src="./assets/images/equipment/equipment-2.png" alt="Фото оборудование">
               </picture>
             </div>
             <div class="equipment__tabs-module" data-tabs-pane data-copy-parent>
               <div class="equipment__info-inner">
                 <p class="equipment__name">Оборудование</p>
-                <h2 class="equipment__title">Установка для фильтрации и очистки газов <span class="equipment__title-color">Sorption</span></h2>
-                <p class="equipment__text" data-copy-after>Для фильтрации и очистки воздуха от газообразных загрязнений. Может применяться для очистки воздушных выбросов промышленных предприятий.</p>
+                <h2 class="equipment__title">Установка плазмокаталитической очистки <span class="equipment__title-color">NE OPTIMA</span></h2>
+                <p class="equipment__text" data-copy-after>NE OPTIMA предназначена для очистки воздуха от вредных газов методом их деструкции (конверсии) до простых химических соединений, безопасных для человека и окружающей среды.</p>
                 <div class="equipment__button-inner">
                   <a class="equipment__button" href="#">подробнее</a>
                   <div class="equipment__fancybox-container" data-fancybox-container>
@@ -188,15 +200,15 @@
                 </div>
               </div>
               <picture class="equipment__img-wrapper" data-img-change>
-                <source srcset="./assets/images/equipment/equipment-test.webp" type="image/webp">
-                <img class="equipment__img" src="./assets/images/equipment/equipment-test.png" alt="Фото оборудование">
+                <source srcset="./assets/images/equipment/equipment-3.webp" type="image/webp">
+                <img class="equipment__img" src="./assets/images/equipment/equipment-3.png" alt="Фото оборудование">
               </picture>
             </div>
             <div class="equipment__tabs-module" data-tabs-pane data-copy-parent>
               <div class="equipment__info-inner">
                 <p class="equipment__name">Оборудование</p>
-                <h2 class="equipment__title">Установка для фильтрации и очистки газов <span class="equipment__title-color">Sorption</span></h2>
-                <p class="equipment__text" data-copy-after>Для фильтрации и очистки воздуха от газообразных загрязнений. Может применяться для очистки воздушных выбросов промышленных предприятий.</p>
+                <h2 class="equipment__title">Адсорбционные фильтры <span class="equipment__title-color">NE SORP</span></h2>
+                <p class="equipment__text" data-copy-after>Адсорбционные фильтры NE SORP используют для очистки газов с невысоким содержанием газообразных примесей.</p>
                 <div class="equipment__button-inner">
                   <a class="equipment__button" href="#">подробнее</a>
                   <div class="equipment__fancybox-container" data-fancybox-container>
@@ -207,8 +219,8 @@
                 </div>
               </div>
               <picture class="equipment__img-wrapper" data-img-change>
-                <source srcset="./assets/images/equipment/equipment-test.webp" type="image/webp">
-                <img class="equipment__img" src="./assets/images/equipment/equipment-test.png" alt="Фото оборудование">
+                <source srcset="./assets/images/equipment/equipment-4.webp" type="image/webp">
+                <img class="equipment__img" src="./assets/images/equipment/equipment-4.png" alt="Фото оборудование">
               </picture>
             </div>
           </div>
@@ -243,61 +255,68 @@
       <div class="popular__wrapper">
         <p class="popular__subtitle">Решения</p>
         <h2 class="popular__title">Популярные отраслевые решения</h2>
-        <div class="popular__inner">
+        <div class="popular__inner" data-height-change>
           <div class="popular__item-inner">
-            <div class="popular__item" data-bg="./assets/images/popular/1.jpg" data-bg-webp="./assets/images/popular/1.webp">
-              <h3 class="popular__item-subtitle">Производство лакокрасочных материалов (ЛКМ).</h3>
-              <p class="popular__item-text">Производство ЛКМ характеризуется выделением летучих вредных веществ от основных производственных узлов </p>
-              <a class="popular__item-button" href="#">Подробнее</a>
+            <div class="popular__item-wrapper">
+              <div class="popular__item" data-bg="./assets/images/popular/1.jpg" data-bg-webp="./assets/images/popular/1.webp" data-height>
+                <h3 class="popular__item-subtitle">Производство лакокрасочных материалов (ЛКМ).</h3>
+                <p class="popular__item-text">Производство ЛКМ характеризуется выделением летучих вредных веществ от основных производственных узлов </p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/2.jpg" data-bg-webp="./assets/images/popular/2.webp">
+                <h3 class="popular__item-subtitle">Окрасочные и сушильные камеры промышленных предприятий</h3>
+                <p class="popular__item-text">Окрасочные (покрасочные) и сушильные камеры применяются в различных отраслях промышленности: производство легковой, грузовой и спецтехники</p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/3.jpg" data-bg-webp="./assets/images/popular/3.webp">
+                <h3 class="popular__item-subtitle">Цветная металлургия</h3>
+                <p class="popular__item-text">Литье по выплавляемым моделям - один из способов получения деталей (например, из алюминия) высокой точности. </p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/4.jpg" data-bg-webp="./assets/images/popular/4.webp">
+                <h3 class="popular__item-subtitle">Производство полимерных изделий, в том числе из вторичного сырья.</h3>
+                <p class="popular__item-text">При производстве полимерных в воздух рабочей зоны попадает большое количество загрязняющих веществ (т.н. «вредностей»). Эти вещества относятся к различным классам органических соединений</p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/5.jpg" data-bg-webp="./assets/images/popular/5.webp">
+                <h3 class="popular__item-subtitle">Хранение и розлив нефтепродуктов </h3>
+                <p class="popular__item-text">Модифицированный битум с повышенными технологическими характеристиками изготавливают из дорожного, строительного и других видов битума</p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
             </div>
-            <div class="popular__item" data-bg="./assets/images/popular/2.jpg" data-bg-webp="./assets/images/popular/2.webp">
-              <h3 class="popular__item-subtitle">Окрасочные и сушильные камеры промышленных предприятий</h3>
-              <p class="popular__item-text">Окрасочные (покрасочные) и сушильные камеры применяются в различных отраслях промышленности: производство легковой, грузовой и спецтехники</p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/3.jpg" data-bg-webp="./assets/images/popular/3.webp">
-              <h3 class="popular__item-subtitle">Цветная металлургия</h3>
-              <p class="popular__item-text">Литье по выплавляемым моделям - один из способов получения деталей (например, из алюминия) высокой точности. </p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/4.jpg" data-bg-webp="./assets/images/popular/4.webp">
-              <h3 class="popular__item-subtitle">Производство полимерных изделий, в том числе из вторичного сырья.</h3>
-              <p class="popular__item-text">При производстве полимерных в воздух рабочей зоны попадает большое количество загрязняющих веществ (т.н. «вредностей»). Эти вещества относятся к различным классам органических соединений</p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/5.jpg" data-bg-webp="./assets/images/popular/5.webp">
-              <h3 class="popular__item-subtitle">Хранение и розлив нефтепродуктов </h3>
-              <p class="popular__item-text">Модифицированный битум с повышенными технологическими характеристиками изготавливают из дорожного, строительного и других видов битума</p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/6.jpg" data-bg-webp="./assets/images/popular/6.webp">
-              <h3 class="popular__item-subtitle">Полиграфические производство</h3>
-              <p class="popular__item-text">Окрасочные (покрасочные) и сушильные камеры применяются в различных отраслях промышленности: производство легковой, грузовой и спецтехники</p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/7.jpg" data-bg-webp="./assets/images/popular/7.webp">
-              <h3 class="popular__item-subtitle">Лазерная резка</h3>
-              <p class="popular__item-text">Литье по выплавляемым моделям - один из способов получения деталей (например, из алюминия) высокой точности. </p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/8.jpg" data-bg-webp="./assets/images/popular/8.webp">
-              <h3 class="popular__item-subtitle">Производство ароматизаторов</h3>
-              <p class="popular__item-text">При производстве полимерных в воздух рабочей зоны попадает большое количество загрязняющих веществ (т.н. «вредностей»). Эти вещества относятся к различным классам органических соединений</p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/1.jpg" data-bg-webp="./assets/images/popular/1.webp">
-              <h3 class="popular__item-subtitle">Пищевая промышленность</h3>
-              <p class="popular__item-text">Модифицированный битум с повышенными технологическими характеристиками изготавливают из дорожного, строительного и других видов битума</p>
-              <a class="popular__item-button" href="#">Подробнее</a>
-            </div>
-            <div class="popular__item" data-bg="./assets/images/popular/10.jpg" data-bg-webp="./assets/images/popular/10.webp">
-              <h3 class="popular__item-subtitle">Предприятия Водоканала, очистные сооружения</h3>
-              <p class="popular__item-text">Производство ЛКМ характеризуется выделением летучих вредных веществ от основных производственных узлов </p>
-              <a class="popular__item-button" href="#">Подробнее</a>
+            <div class="popular__item-wrapper popular__item-wrapper--last">
+              <div class="popular__item" data-bg="./assets/images/popular/6.jpg" data-bg-webp="./assets/images/popular/6.webp">
+                <h3 class="popular__item-subtitle">Полиграфические производство</h3>
+                <p class="popular__item-text">Окрасочные (покрасочные) и сушильные камеры применяются в различных отраслях промышленности: производство легковой, грузовой и спецтехники</p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/7.jpg" data-bg-webp="./assets/images/popular/7.webp">
+                <h3 class="popular__item-subtitle">Лазерная резка</h3>
+                <p class="popular__item-text">Литье по выплавляемым моделям - один из способов получения деталей (например, из алюминия) высокой точности. </p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/8.jpg" data-bg-webp="./assets/images/popular/8.webp">
+                <h3 class="popular__item-subtitle">Производство ароматизаторов</h3>
+                <p class="popular__item-text">При производстве полимерных в воздух рабочей зоны попадает большое количество загрязняющих веществ (т.н. «вредностей»). Эти вещества относятся к различным классам органических соединений</p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/1.jpg" data-bg-webp="./assets/images/popular/1.webp">
+                <h3 class="popular__item-subtitle">Пищевая промышленность</h3>
+                <p class="popular__item-text">Модифицированный битум с повышенными технологическими характеристиками изготавливают из дорожного, строительного и других видов битума</p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
+              <div class="popular__item" data-bg="./assets/images/popular/10.jpg" data-bg-webp="./assets/images/popular/10.webp">
+                <h3 class="popular__item-subtitle">Предприятия Водоканала, очистные сооружения</h3>
+                <p class="popular__item-text">Производство ЛКМ характеризуется выделением летучих вредных веществ от основных производственных узлов </p>
+                <a class="popular__item-button" href="#">Подробнее</a>
+              </div>
             </div>
           </div>
         </div>
-        <a class="popular__link" href="#">Решение</a>
+        <a class="popular__link" href="#">решение
+          <svg class="popular__link-icon" viewBox="0 0 33 18" fill="none">
+           <use class="link-change" href="./assets/images/svg/set.svg#link-arrow"></use>
+          </svg></a>
       </div>
     </div>
   </section>  <section class="about">
@@ -309,7 +328,14 @@
             <p class="about__text">Компания начала свою деятельность в 2016 году, собрав команду специалистов технического профиля. Совместно с Санкт-Петербургским Политехническим Университетом Петра Великого были разработаны собственные решения в области промышленной очистки воздуха.</p>
             <div class="about__button-inner">
               <a class="about__button" href="#">подробнее</a>
-              <a class="about__all-photo" href="#">Сертификаты</a>
+              <div class="about__photo-container">
+                <a class="about__all-photo" href="./assets/images/certificate/1.jpg" data-fancybox="certificate">Сертификаты</a>
+                <div style="display: none">
+                  <a class="about__all-photo" href="./assets/images/certificate/2.jpg" data-fancybox="certificate"></a>
+                  <a class="about__all-photo" href="./assets/images/certificate/3.jpg" data-fancybox="certificate"></a>
+                  <a class="about__all-photo" href="./assets/images/certificate/4.jpg" data-fancybox="certificate"></a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="about__item">
@@ -323,131 +349,175 @@
         <p class="plus__subtitle">Преимущества</p>
         <h2 class="plus__title">Плюсы работы с нами</h2>
         <div class="plus__inner">
-          <div class="plus__item plus__item--big">
+          <div class="plus__item plus__item--big" data-more-parent>
             <h3 class="plus__item-subtitle">Отечественные комплектующие</h3>
-            <p class="plus__item-text">Оборудование выполняется с применением сертифицированных отечественных компонентов, <br> в том числе - катализатор </p>
-            <button class="plus__more">читать далее</button>
+            <p class="plus__item-text">Оборудование выполняется с применением сертифицированных отечественных компонентов, в том числе основных: катализатор низкотемпературный, силовой преобразователь, щит управления, система автоматизации, плазменные модули (собираемые Изготовителем из отечественных материалов).</p>
+  <!--          <p class="plus__item-text">Оборудование выполняется с применением сертифицированных отечественных компонентов, в том числе - -->
+  <!--            <span class="plus__text-hidden" data-more style="display: none">катализатор низкотемпературный, силовой преобразователь, щит управления, система автоматизации, плазменные модули (собираемые Изготовителем из отечественных материалов)</span>.</p>-->
+  <!--          <div class="plus__button-inner">-->
+  <!--            <button class="plus__more" data-more-button>читать далее</button>-->
+  <!--            <svg class="plus__arrow-more" data-svg-more>-->
+  <!--              <use href="./assets/images/svg/set.svg#arrow-more-plus"></use>-->
+  <!--            </svg>-->
+  <!--          </div>-->
           </div>
           <div class="plus__item plus__item--big">
             <h3 class="plus__item-subtitle">Увеличенный ресурс и эффективность</h3>
-            <p class="plus__item-text">Применяемая компоновка Оборудования (вынесенный плазменный блок) – позволяет избежать отложения продуктов распада на плазменных модулях и увеличивает его </p>
-            <button class="plus__more">читать далее</button>
+            <p class="plus__item-text">Применяемая компоновка Оборудования (вынесенный плазменный блок) – позволяет избежать отложения продуктов распада на плазменных модулях и увеличивает его эффективность и срок службы.</p>
+  
           </div>
           <div class="plus__item">
             <h3 class="plus__item-subtitle">Высокотехнологичное и ремонтопригодное оборудования</h3>
-            <p class="plus__item-text">Система управления Оборудования снабжена программируемой обратной связью по напряжению, силе тока и частоте, что позволяет продлить работуG</p>
-            <button class="plus__more">читать далее</button>
+            <p class="plus__item-text">Система управления Оборудования снабжена программируемой обратной связью по напряжению, силе тока и частоте, что позволяет продлить работу применяемых силовых преобразователей и плазменных модулей в сложных режимах эксплуатации (повышенная влажность и/или</p>
+  
           </div>
           <div class="plus__item">
             <h3 class="plus__item-subtitle">Защита от перепадов напряжения</h3>
             <p class="plus__item-text">Оборудование оснащено системой защиты от колебаний напряжения питающей сети.</p>
-            <button class="plus__more">читать далее</button>
           </div>
           <div class="plus__item">
             <h3 class="plus__item-subtitle">Качественные материалы.</h3>
             <p class="plus__item-text">Материал исполнения Оборудования подбирается с учетом свойств (в т.ч. коррозионных) обрабатываемой среды.</p>
-            <button class="plus__more">читать далее</button>
+  
           </div>
         </div>
       </div>
     </div>
   </section>  <section class="production">
     <div class="container">
-      <div class="production__wrapper" data-tabs>
+      <div class="production__wrapper" data-tabs data-swiper-production>
   
-        <div class="production__tab-content tabs-pane-show" data-tabs-pane>
-          <div class="production__tab-item" data-button-copy>
-            <div class="production__tab-item-inner">
-              <p class="production__tab-subtitle">Кейсы</p>
-              <h3 class="production__tab-title">Цех резки поролона, пенопласта. <br><span class="production__title-color">ООО «ЦЕНТР РЕЗКИ»</span></h3>
-              <p class="production__tab-text" data-after-production>Задача: очистка воздуха в цехе, где производится резка поролона, пенопласта. В процессе работы в воздух выделяются вредные вещества, среди которых изоцианаты. При нарушениях техники безопасности они способны причинить серьезный вред здоровью работников.</p>
-            </div>
-            <div class="production__tab-slider">
-              <div class="production__swiper swiper" data-production-swiper>
-                <div class="production__swiper-wrapper swiper-wrapper">
-                  <div class="production__slide swiper-slide">
-                    <picture><source srcset="./assets/images/production/swiper-test-mob.jpg" media="(max-width: 991px)" type="image/jpg" /><source srcset="./assets/images/production/swiper-test.jpg" media="(min-width: 992px)" type="image/jpg" /><source srcset="./assets/images/production/swiper-test-mob.webp" media="(max-width: 991px)" type="image/webp" /><source srcset="./assets/images/production/swiper-test.webp" media="(min-width: 992px)" type="image/webp" /><img src="./assets/images/production/swiper-test.jpg" alt="Фото"
-                         
-                         
-                         
-                    ></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+        <div class="production__container">
+          <div class="production__tab-content tabs-pane-show" data-tabs-pane>
+            <div class="production__tab-item" >
+              <div class="production__tab-item-inner">
+                <p class="production__tab-subtitle">Кейсы</p>
+                <h3 class="production__tab-title">Цех резки поролона, пенопласта. <br><span class="production__title-color">ООО «ЦЕНТР РЕЗКИ»</span></h3>
+                <p class="production__tab-text">Задача: очистка воздуха в цехе, где производится резка поролона, пенопласта. В процессе работы в воздух выделяются вредные вещества, среди которых изоцианаты. При нарушениях техники безопасности они способны причинить серьезный вред здоровью работников.</p>
+                <a class="production__tab-link production__tab-link--desk" href="#">подробнее</a>
+              </div>
+              <div class="production__tab-slider">
+                <div class="production__swiper swiper" data-production-swiper>
+                  <div class="production__swiper-wrapper swiper-wrapper">
+                    <div class="production__slide swiper-slide">
+                      <picture><source srcset="./assets/images/production/swiper-test-mob.jpg" media="(max-width: 991px)" type="image/jpg" /><source srcset="./assets/images/production/swiper-test.jpg" media="(min-width: 992px)" type="image/jpg" /><source srcset="./assets/images/production/swiper-test-mob.webp" media="(max-width: 991px)" type="image/webp" /><source srcset="./assets/images/production/swiper-test.webp" media="(min-width: 992px)" type="image/webp" /><img src="./assets/images/production/swiper-test.jpg" alt="Фото"
+                           
+                           
+                           
+                      ></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                  </div>
+                  <div class="production__button production__button--next swiper-button-next" data-production-next></div>
+                  <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
                 </div>
-                <div class="production__button production__button--next swiper-button-next" data-production-next></div>
-                <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
+              </div>
+              <div class="production__button-inner">
+                <a class="production__tab-link" href="#">подробнее</a>
+                <div class="production__case-inner">
+                  <a class="production__case" href="#">все кейсы</a>
+                  <svg class="production__svg-icon">
+                    <use href="./assets/images/svg/set.svg#arrow-black"></use>
+                  </svg>
+                </div>
               </div>
             </div>
-            <a class="production__tab-link" href="#" data-button-change>подробнее</a>
           </div>
   
-        </div>
-  
-        <div class="production__tab-content" data-tabs-pane>
-          <div class="production__tab-item" data-button-copy>
-            <div class="production__tab-item-inner">
-              <p class="production__tab-subtitle">Кейсы</p>
-              <h3 class="production__tab-title">Цех резки поролона, пенопласта. <br><span class="production__title-color">ООО «ЦЕНТР РЕЗКИ»</span></h3>
-              <p class="production__tab-text" data-after-production>Задача: очистка воздуха в цехе, где производится резка поролона, пенопласта. В процессе работы в воздух выделяются вредные вещества, среди которых изоцианаты. При нарушениях техники безопасности они способны причинить серьезный вред здоровью работников.</p>
-            </div>
-            <div class="production__tab-slider">
-              <div class="production__swiper swiper" data-production-swiper>
-                <div class="production__swiper-wrapper swiper-wrapper">
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+          <div class="production__tab-content" data-tabs-pane>
+            <div class="production__tab-item" >
+              <div class="production__tab-item-inner">
+                <p class="production__tab-subtitle">Кейсы</p>
+                <h3 class="production__tab-title">Производство битума. <br><span class="production__title-color">КОМПАНИЯ «БИТУМ+»</span></h3>
+                <p class="production__tab-text">Задача: очистка воздуха в производственной зоне от вредных химических соединений, снижение концентраций углеводородов, ксилола, сероводорода. Использована установка NE 1500, интегрированная в имеющуюся систему вентиляции. С ее помощью проходит обработка газовоздушной смеси от дымов и аэрозолей, устранение вредных газов. Степень очистки 99,6%.</p>
+                <a class="production__tab-link production__tab-link--desk" href="#">подробнее</a>
+              </div>
+              <div class="production__tab-slider">
+                <div class="production__swiper swiper" data-production-swiper>
+                  <div class="production__swiper-wrapper swiper-wrapper">
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                  </div>
+                  <div class="production__button production__button--next swiper-button-next" data-production-next></div>
+                  <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
                 </div>
-                <div class="production__button production__button--next swiper-button-next" data-production-next></div>
-                <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
+              </div>
+              <div class="production__button-inner">
+                <a class="production__tab-link" href="#">подробнее</a>
+                <div class="production__case-inner">
+                  <a class="production__case" href="#">все кейсы</a>
+                  <svg class="production__svg-icon">
+                    <use href="./assets/images/svg/set.svg#arrow-black"></use>
+                  </svg>
+                </div>
               </div>
             </div>
-            <a class="production__tab-link" href="#" data-button-change>подробнее</a>
+  
           </div>
   
-        </div>
-  
-        <div class="production__tab-content" data-tabs-pane>
-          <div class="production__tab-item" data-button-copy>
-            <div class="production__tab-item-inner">
-              <p class="production__tab-subtitle">Кейсы</p>
-              <h3 class="production__tab-title">Цех резки поролона, пенопласта. <br><span class="production__title-color">ООО «ЦЕНТР РЕЗКИ»</span></h3>
-              <p class="production__tab-text" data-after-production>Задача: очистка воздуха в цехе, где производится резка поролона, пенопласта. В процессе работы в воздух выделяются вредные вещества, среди которых изоцианаты. При нарушениях техники безопасности они способны причинить серьезный вред здоровью работников.</p>
-            </div>
-            <div class="production__tab-slider">
-              <div class="production__swiper swiper" data-production-swiper>
-                <div class="production__swiper-wrapper swiper-wrapper">
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+          <div class="production__tab-content" data-tabs-pane>
+            <div class="production__tab-item" >
+              <div class="production__tab-item-inner">
+                <p class="production__tab-subtitle">Кейсы</p>
+                <h3 class="production__tab-title">Очистные сооружения. <br><span class="production__title-color">МПП ВКХ «ОРЕЛВОДОКАНАЛ»</span></h3>
+                <p class="production__tab-text">МПП ВКХ «Орелводоканал» является крупнейшим предприятием системы жизнеобеспечения города, предоставляет услуги по водоснабжению и водоотведению потребителям. На станции перекачки работает комплекс гидротехнического оборудования для перемещения хозяйственно-бытовых, промышленных и сточных вод на очистные сооружения. Задача: сократить объемы и уменьшить зону рассеивания химических выбросов в воздух.</p>
+                <a class="production__tab-link production__tab-link--desk" href="#">подробнее</a>
+              </div>
+              <div class="production__tab-slider">
+                <div class="production__swiper swiper" data-production-swiper>
+                  <div class="production__swiper-wrapper swiper-wrapper">
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                  </div>
+                  <div class="production__button production__button--next swiper-button-next" data-production-next></div>
+                  <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
                 </div>
-                <div class="production__button production__button--next swiper-button-next" data-production-next></div>
-                <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
+              </div>
+              <div class="production__button-inner">
+                <a class="production__tab-link" href="#">подробнее</a>
+                <div class="production__case-inner">
+                  <a class="production__case" href="#">все кейсы</a>
+                  <svg class="production__svg-icon">
+                    <use href="./assets/images/svg/set.svg#arrow-black"></use>
+                  </svg>
+                </div>
               </div>
             </div>
-            <a class="production__tab-link" href="#" data-button-change>подробнее</a>
+  
           </div>
   
-        </div>
-  
-        <div class="production__tab-content" data-tabs-pane>
-          <div class="production__tab-item" data-button-copy>
-            <div class="production__tab-item-inner">
-              <p class="production__tab-subtitle">Кейсы</p>
-              <h3 class="production__tab-title">Цех резки поролона, пенопласта. <br><span class="production__title-color">ООО «ЦЕНТР РЕЗКИ»</span></h3>
-              <p class="production__tab-text" data-after-production>Задача: очистка воздуха в цехе, где производится резка поролона, пенопласта. В процессе работы в воздух выделяются вредные вещества, среди которых изоцианаты. При нарушениях техники безопасности они способны причинить серьезный вред здоровью работников.</p>
-            </div>
-            <div class="production__tab-slider">
-              <div class="production__swiper swiper" data-production-swiper>
-                <div class="production__swiper-wrapper swiper-wrapper">
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
-                  <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+          <div class="production__tab-content" data-tabs-pane>
+            <div class="production__tab-item" >
+              <div class="production__tab-item-inner">
+                <p class="production__tab-subtitle">Кейсы</p>
+                <h3 class="production__tab-title">Цех резки поролона, пенопласта. <br><span class="production__title-color">ООО «ЦЕНТР РЕЗКИ» </span></h3>
+                <p class="production__tab-text">Задача: очистка воздуха в цехе, где производится резка поролона, пенопласта. В процессе работы в воздух выделяются вредные вещества, среди которых изоцианаты. При нарушениях техники безопасности они способны причинить серьезный вред здоровью работников.</p>
+                <a class="production__tab-link production__tab-link--desk" href="#">подробнее</a>
+              </div>
+              <div class="production__tab-slider">
+                <div class="production__swiper swiper" data-production-swiper>
+                  <div class="production__swiper-wrapper swiper-wrapper">
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                    <div class="production__slide swiper-slide"><picture><source srcset="./assets/images/production/swiper-test.webp" type="image/webp"><img src="./assets/images/production/swiper-test.jpg" alt="Фото"></picture></div>
+                  </div>
+                  <div class="production__button production__button--next swiper-button-next" data-production-next></div>
+                  <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
                 </div>
-                <div class="production__button production__button--next swiper-button-next" data-production-next></div>
-                <div class="production__button production__button--prev swiper-button-prev" data-production-prev></div>
+              </div>
+              <div class="production__button-inner">
+                <a class="production__tab-link" href="#">подробнее</a>
+                <div class="production__case-inner">
+                  <a class="production__case" href="#">все кейсы</a>
+                  <svg class="production__svg-icon">
+                    <use href="./assets/images/svg/set.svg#arrow-black"></use>
+                  </svg>
+                </div>
               </div>
             </div>
-            <a class="production__tab-link" href="#" data-button-change>подробнее</a>
+  
           </div>
   
         </div>
@@ -456,10 +526,32 @@
           <button class="production__tab-button tabs-active" data-tabs-btn>Цех резки поролона, пенопласта</button>
           <button class="production__tab-button" data-tabs-btn>Производство битума</button>
           <button class="production__tab-button" data-tabs-btn>Очистные сооружения</button>
-          <button class="production__tab-button" data-tabs-btn>Тактовый налив нефтепродуктов </button>
+          <button class="production__tab-button" data-tabs-btn>Тактовый налив нефтепродуктов</button>
   
         </div>
-        <a class="production__case" href="#">Все кейсы</a>
+        <div class="production__case-inner production__case-inner--mob">
+          <a class="production__case" href="#">все кейсы</a>
+          <svg class="production__svg-icon">
+            <use href="./assets/images/svg/set.svg#arrow-black"></use>
+          </svg>
+        </div>
+  
+      </div>
+      <div class="production__control-inner">
+        <div class="production__swiper-control" data-production-control>
+          <div class="production__swiper-number">
+            <div class="production__number production__number--current" data-production-current></div>
+            <div class="production__number-separator">/</div>
+            <div class="production__number production__number--total" data-production-total></div>
+          </div>
+          <div class="production__button-swiper-inner">
+            <div class="production__button-swiper production__button-swiper--prev" data-productionMain-prev></div>
+            <div class="production__button-swiper production__button-swiper--next" data-productionMain-next></div>
+          </div>
+          <div class="production__pagination swiper-pagination" data-production-pagination></div>
+        </div>
+  
+  
       </div>
     </div>
   </section>  <script src="../../../assets/js/index/custom-scripts.js"></script>
@@ -483,7 +575,8 @@
               <div class="stage__item">
                 <h3 class="stage__subtitle">Обследование</h3>
                 <p class="stage__text">Обследование источников выделения/выброса на производстве проводится с целью составления технического задания на проведение проектных работ или непосредственно на изготовление Оборудования очистки выбросов.</p>
-                <p class="stage__text">В ходе обследования выполняются замеры объема выброса (м3/ч, м3/с), температуры выброса (0С) и определение концентраций компонентов выброса (с привлечением аттестованной лаборатории или с помощью замеров переносным газоанализатором). Также на месте определяется возможность локализации выброса системой вытяжной вентиляции.</p>
+                <p class="stage__text">В ходе обследования выполняются замеры объема выброса (м3/ч, м3/с), температуры выброса (0С) и определение концентраций компонентов выброса (с привлечением аттестованной лаборатории или с помощью замеров переносным газоанализатором).</p>
+                <p class="stage__text">Также на месте определяется возможность локализации выброса системой вытяжной вентиляции.</p>
               </div>
               <div class="stage__item">
                 <picture><source srcset="./assets/images/stages/1.webp" type="image/webp"><img src="./assets/images/stages/1.jpg" alt="Исследования" width="673" height="423"></picture>
@@ -494,7 +587,7 @@
             <div class="stage">
               <div class="stage__item">
                 <h3 class="stage__subtitle">Проектирование</h3>
-                <p class="stage__text">Руководство завода определяет необходимость проведения обследования оборудования и назначает время и дату его проведения.</p>
+                <p class="stage__text">Как правило, основной раздел проектной документации – В (вентиляция). На основании согласованного сторонами ТЗ подбирается необходимая модификация установки очистки выбросов, выполняется рабочая документация, в т.ч. план с расположением вентиляционного и газоочистного оборудования, аксонометрическая схема вентиляции, спецификация оборудования, паспортизация системы вентиляции и выдача задания на подключение к электроснабжению.</p>
               </div>
               <div class="stage__item">
                 <picture><source srcset="./assets/images/stages/2.webp" type="image/webp"><img src="./assets/images/stages/2.jpg" alt="Проектирование" width="673" height="423"></picture>
@@ -505,7 +598,7 @@
             <div class="stage">
               <div class="stage__item">
                 <h3 class="stage__subtitle">Изготовление оборудования</h3>
-                <p class="stage__text">Руководство завода определяет необходимость проведения обследования оборудования и назначает время и дату его проведения.</p>
+                <p class="stage__text">Изготовление Оборудования выполняется на собственной площадке. Оборудование поставляется Заказчику в виде секций для удобства транспортировки и последующего монтажа на месте его размещения. Срок изготовления Оборудования – от 30 до 50 календарных дней.</p>
               </div>
               <div class="stage__item">
                 <picture><source srcset="./assets/images/stages/3.webp" type="image/webp"><img src="./assets/images/stages/3.jpg" alt="Изготовление оборудования" width="673" height="423"></picture>
@@ -515,8 +608,8 @@
           <div class="stages__info-slide swiper-slide">
             <div class="stage">
               <div class="stage__item">
-                <h3 class="stage__subtitle">Монтаж</h3>
-                <p class="stage__text">Руководство завода определяет необходимость проведения обследования оборудования и назначает время и дату его проведения.</p>
+                <h3 class="stage__subtitle">Монтажные работы;</h3>
+                <p class="stage__text">Монтажные работы выполняются Изготовителем оборудования на заранее подготовленной Заказчиком площадке. Срок выполнения работ в- среднем от 2 до 5 рабочих дней (для одной установки).</p>
               </div>
               <div class="stage__item">
                 <picture><source srcset="./assets/images/stages/4.webp" type="image/webp"><img src="./assets/images/stages/4.jpg" alt="Монтаж" width="673" height="423"></picture>
@@ -526,8 +619,8 @@
           <div class="stages__info-slide swiper-slide">
             <div class="stage">
               <div class="stage__item">
-                <h3 class="stage__subtitle">Пуско-наладка</h3>
-                <p class="stage__text">Руководство завода определяет необходимость проведения обследования оборудования и назначает время и дату его проведения.</p>
+                <h3 class="stage__subtitle">Пусконаладочные работы;</h3>
+                <p class="stage__text">По факту выполнения монтажных работ Изготовитель Оборудования осуществляет пусконаладочные работы. Срок выполнения работ в-среднем от 2 до 5 рабочих дней (для одной установки). Осуществляется настройка Оборудования для конкретного технологического процесса на предприятии. Гарантийный срок на Оборудование составляет 12 месяцев.</p>
               </div>
               <div class="stage__item">
                 <picture><source srcset="./assets/images/stages/5.webp" type="image/webp"><img src="./assets/images/stages/5.jpg" alt="Пуско-наладка" width="673" height="423"></picture>
@@ -537,8 +630,8 @@
           <div class="stages__info-slide swiper-slide">
             <div class="stage">
               <div class="stage__item">
-                <h3 class="stage__subtitle">Обслуживание</h3>
-                <p class="stage__text">Руководство завода определяет необходимость проведения обследования оборудования и назначает время и дату его проведения.</p>
+                <h3 class="stage__subtitle">Техническое Обслуживание.</h3>
+                <p class="stage__text">Изготовитель оборудования осуществляет техническое обслуживание (ТО) Оборудования на основании отдельного Договора.</p>
               </div>
               <div class="stage__item">
                 <picture><source srcset="./assets/images/stages/6.webp" type="image/webp"><img src="./assets/images/stages/6.jpg" alt="Обслуживание" width="673" height="423"></picture>
@@ -582,7 +675,7 @@
             <fieldset class="form__inner">
               <legend class="form__title">Оставить заявку</legend>
               <fieldset class="form__label-inner">
-                <label class="form__label"> <input class="form__input" type="text" placeholder="Имя*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Номер*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Город*"></label>
+                <label class="form__label"> <input class="form__input" type="text" placeholder="Имя*"></label> <label class="form__label"> <input class="form__input" type="tel" placeholder="Номер*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Город*"></label>
               </fieldset>
               <fieldset class="form__textarea-inner">
                 <label class="form__label form__label--textarea"><textarea class="form__textarea" placeholder="Комментарий"></textarea></label>
@@ -604,6 +697,9 @@
       </div>
     </div>
   </section></main>
+
+
+
 
 <footer class="footer">
   <div class="container">
@@ -657,11 +753,17 @@
       <fieldset class="form__inner">
         <legend class="form__title">Оставить заявку</legend>
         <fieldset class="form__label-inner">
-          <label class="form__label"> <input class="form__input" type="text" placeholder="Имя*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Номер*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Город*"></label>
+          <label class="form__label"><input class="form__input" type="text" required><span class="form__fake-label">Имя*</span></label>
+          <label class="form__label"><input class="form__input" type="tel" required><span class="form__fake-label">Номер*</span></label>
+          <label class="form__label"><input class="form__input" type="text" required><span class="form__fake-label">Город*</span></label>
         </fieldset>
         <fieldset class="form__textarea-inner">
           <label class="form__label form__label--textarea"><textarea class="form__textarea" placeholder="Комментарий"></textarea></label>
         </fieldset>
+        <label class="form__label-file">
+          <input class="form__file" type="file" accept=".pdf,.docx,.txt">
+          <span class="form__fake-file">Добавить файл <span class="form__fake-file-color">.pdf, .docx, .txt</span></span>
+        </label>
         <fieldset class="form__politic-inner">
           <button class="form__button" type="submit">оставить заявку</button>
           <label class="fake-checkbox"> <input class="fake-checkbox__input" type="checkbox" checked> <span class="fake-checkbox__checkbox-inner">
@@ -686,11 +788,13 @@
       <fieldset class="form__inner">
         <legend class="form__title">Оставить заявку</legend>
         <fieldset class="form__label-inner">
-          <label class="form__label"> <input class="form__input" type="text" placeholder="Имя*"></label> <label class="form__label"> <input class="form__input" type="text" placeholder="Номер*"></label>
+          <label class="form__label"><input class="form__input" type="text" required><span class="form__fake-label">Имя*</span></label>
+          <label class="form__label"><input class="form__input" type="tel" required><span class="form__fake-label">Номер*</span></label>
         </fieldset>
         <fieldset class="form__politic-inner">
           <button class="form__button" type="submit">оставить заявку</button>
-          <label class="fake-checkbox"> <input class="fake-checkbox__input" type="checkbox" checked> <span class="fake-checkbox__checkbox-inner">
+          <label class="fake-checkbox">
+            <input class="fake-checkbox__input" type="checkbox" checked> <span class="fake-checkbox__checkbox-inner">
                       <span class="fake-checkbox__checkbox"></span>
                       <span class="fake-checkbox__text">Я согласен на обработку <a class="fake-checkbox__link" href="#">персональных данных</a></span>
                     </span> </label>

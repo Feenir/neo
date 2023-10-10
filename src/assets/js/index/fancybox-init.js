@@ -20,5 +20,10 @@ if (fancyboxContainer) {
 }
 
 
+Fancybox.bind(`[data-fancybox="certificate"]`, {
+    // Your custom options
+});
+
+
 
 

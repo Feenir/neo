@@ -12,7 +12,7 @@ date ? date.innerHTML = new Date().getFullYear() : false
 // ==================================================================
 // Функции для копирования картинки
 // ==================================================================
-const imgCopy = (breakpoint,parent,appendElAfter,copyElement) => {
+const imgCopy = (breakpoint, parent, appendElAfter, copyElement) => {
     breakpoint = window.matchMedia(breakpoint);//Брейк поинты
     let parentsEl = document.querySelectorAll(parent)
     parentsEl.forEach(function (parentEl) {
@@ -34,9 +34,8 @@ const imgCopy = (breakpoint,parent,appendElAfter,copyElement) => {
 
 }
 
-imgCopy('(max-width: 991px)', '[data-copy-parent]','[data-copy-after]','[data-img-change]')
-imgCopy('(min-width: 991px)', '[data-button-copy]','[data-after-production]','[data-button-change]')
-
+imgCopy('(max-width: 991px)', '[data-copy-parent]', '[data-copy-after]', '[data-img-change]')
+imgCopy('(min-width: 991px)', '[data-button-copy]', '[data-after-production]', '[data-button-change]')
 
 
 // ==================================================================
@@ -65,59 +64,44 @@ function addClassSwiper(breakpointActive, swiperName) {
     checkerSwiper();
 }
 
-addClassSwiper('(max-width: 991px)', document.querySelector('[data-equipment-swiper]'))
+let equipmentSwiper = document.querySelector('[data-equipment-swiper]')
+if (equipmentSwiper) {
+    addClassSwiper('(max-width: 991px)', equipmentSwiper)
+}
+
+let swiperProduction = document.querySelector('[data-swiper-production]')
+
+if (swiperProduction) {
+    addClassSwiper('(max-width: 991px)', swiperProduction)
+}
+
+
 
 /*
 ===================================================
 Функции для управления кастомной пагинации
 ===================================================
 */
-function sliderNumber(mySliderTotalSlides, mySliderCurrentSlide, currentSlider,elementDisabled) {
 
-    if (elementDisabled) {
-        mySliderCurrentSlide.innerHTML = String(++currentSlider.realIndex).padStart(2, '0')
-        --currentSlider.realIndex
-        if (currentSlider.params.slidesPerView > 1) {
-            mySliderTotalSlides.innerHTML = String(Math.round(++currentSlider.slides.length - currentSlider.params.slidesPerView)).padStart(2, '0')
-        } else {
-            mySliderTotalSlides.innerHTML = String(Math.round(currentSlider.slides.length)).padStart(2, '0')
-        }
-
-        currentSlider.on('slideChange', function () {
-            let currentSlide = ++currentSlider.realIndex
-            mySliderCurrentSlide.innerHTML = String(currentSlide).padStart(2, '0')
-        })
-
-        if (currentSlider.params.slidesPerView === 1 && currentSlider.params.slidesPerView >= currentSlider.slides.length) {
-            elementDisabled.style.display = 'none'
-        }
-
-        if (currentSlider.params.slidesPerView > 1 && currentSlider.params.slidesPerView >= --currentSlider.slides.length) {
-            elementDisabled.style.display = 'none'
-        }
-    }
-
-    else {
-        return false
-    }
-}
 
 let equipmentTotal = document.querySelector('[data-equipment-total]')
 let equipmentCurrent = document.querySelector('[data-equipment-current]')
 let equipmentControlInner = document.querySelector('[data-equipment-control]')
 
+let productionTotal = document.querySelector('[data-production-total]')
+let productionCurrent = document.querySelector('[data-production-current]')
+let productionControlInner = document.querySelector('[data-production-control]')
+
+
 // ===================================================================
 // Функция по включению выключению свайпера в зависимости от экрана
 // ===================================================================
-const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+const resizableSwiper = (breakpoint, swiperClass, swiperSettings, mySliderTotalSlides,mySliderCurrentSlide,elementDisabled) => {
     let swiper;
     breakpoint = window.matchMedia(breakpoint);
     const enableSwiper = function (className, settings) {
         swiper = new Swiper(className, settings);
-        if (callback) {
-            callback(swiper);
-        }
-    }
+          }
     let checkerActiveResizable = function () {
         if (breakpoint.matches) {
             return enableSwiper(swiperClass, swiperSettings);
@@ -130,29 +114,77 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
 
     breakpoint.addEventListener('change', checkerActiveResizable);
     checkerActiveResizable();
-    if (document.documentElement.clientWidth < 991) {
-        sliderNumber(equipmentTotal,equipmentCurrent,swiper,equipmentControlInner)
-    } else {
-        return false
+    function sliderNumber(mySliderTotalSlides, mySliderCurrentSlide, currentSlider, elementDisabled) {
+
+        if (elementDisabled) {
+            mySliderCurrentSlide.innerHTML = String(++currentSlider.realIndex).padStart(2, '0')
+            --currentSlider.realIndex
+            if (currentSlider.params.slidesPerView > 1) {
+                mySliderTotalSlides.innerHTML = String(Math.round(++currentSlider.slides.length - currentSlider.params.slidesPerView)).padStart(2, '0')
+            } else {
+                mySliderTotalSlides.innerHTML = String(Math.round(currentSlider.slides.length)).padStart(2, '0')
+            }
+
+            currentSlider.on('slideChange', function () {
+                let currentSlide = ++currentSlider.realIndex
+                mySliderCurrentSlide.innerHTML = String(currentSlide).padStart(2, '0')
+            })
+
+            if (currentSlider.params.slidesPerView === 1 && currentSlider.params.slidesPerView >= currentSlider.slides.length) {
+                elementDisabled.style.display = 'none'
+            }
+
+            if (currentSlider.params.slidesPerView > 1 && currentSlider.params.slidesPerView >= --currentSlider.slides.length) {
+                elementDisabled.style.display = 'none'
+            }
+        } else {
+            return false
+        }
+    }
+    if (breakpoint.matches) {
+        sliderNumber(mySliderTotalSlides,mySliderCurrentSlide,swiper,elementDisabled)
     }
 
 }
 
-    resizableSwiper(
-        '(max-width: 991px)',
-        '[data-equipment-swiper]',
-        {
-            slidesPerView: 1,
-            navigation: {
-                nextEl: "[data-equipment-next]",
-                prevEl: "[data-equipment-prev]",
-            },
-            pagination: {
-                el: "[data-equipment-pagination]",
-                type: "progressbar",
-            },
+
+resizableSwiper(
+    '(max-width: 991px)',
+    '[data-equipment-swiper]',
+    {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: "[data-equipment-next]",
+            prevEl: "[data-equipment-prev]",
         },
-    );
+        pagination: {
+            el: "[data-equipment-pagination]",
+            type: "progressbar",
+        },
+    },
+    equipmentTotal,
+    equipmentCurrent,
+    equipmentControlInner
+);
+
+resizableSwiper(
+    '(max-width: 991px)',
+    '[data-swiper-production]',
+    {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: "[data-productionMain-next]",
+            prevEl: "[data-productionMain-prev]",
+        },
+        pagination: {
+            el: "[data-production-pagination]",
+            type: "progressbar",
+        },
+    },
+    productionTotal,
+    productionCurrent,
+    productionControlInner
+);
 
 
 // ==================================================================
@@ -205,38 +237,110 @@ let popupOpensMin = document.querySelectorAll('[data-popup-min-open]')
 let popupMin = document.querySelector('[data-popup-min]')
 let popup = document.querySelector('[data-popup]')
 let popupBody = document.querySelectorAll('.popup__body')
-let closeButton = document.querySelectorAll('[data-close-popup]')
+let closeButtons = document.querySelectorAll('[data-close-popup]')
 
-popupOpens.forEach(function (popupOpen) {
-    popupOpen.addEventListener('click', function (e) {
-        e.preventDefault()
-        popup.classList.add('open')
+function openPopup(buttons, popup, closeButtons, popupBody) {
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            e.preventDefault()
+            popup.classList.add('open')
+        })
     })
-})
-
-popupOpensMin.forEach(function (popupOpenMin) {
-    popupOpenMin.addEventListener('click', function (e) {
-        e.preventDefault()
-        popupMin.classList.add('open')
+    closeButtons.forEach(function (closeButton) {
+        closeButton.addEventListener('click', function () {
+            if (popup.classList.contains('open')) popup.classList.remove('open')
+        })
     })
-})
-
-closeButton.forEach(function (el) {
-    el.addEventListener('click', function () {
-        popup.classList.remove ('open')
-        popupMin.classList.remove ('open')
-    })
-})
 
 
-popup.addEventListener('click', function (e) {
-    popupBody.forEach(function (body) {
-        if (!body.contains(e.target)) {
-            popup.classList.remove('open')
-        }  if (!body.contains(e.target)) {
-            popupMin.classList.remove('open')
+    popup.addEventListener('click', function (e) {
+        let popupThisBody = popup.querySelector(popupBody)
+        if (popup.classList.contains('open')) {
+            if (!popupThisBody.contains(e.target)) {
+                popup.classList.remove('open')
+            }
         }
+    });
+}
+
+openPopup(popupOpens, popup, closeButtons, '.popup__body')
+openPopup(popupOpensMin, popupMin, closeButtons, '.popup__body')
+
+
+// ==================================================================
+// Меняем высоту блока
+// ==================================================================
+
+function changeHeight(element, container) {
+    container.style.maxHeight = element.offsetHeight + 'px'
+}
+
+let element = document.querySelector('[data-height]')
+let container = document.querySelector('[data-height-change]')
+
+if (element && container && document.documentElement.clientWidth > 991) {
+    changeHeight(element, container)
+    window.addEventListener('resize', function () {
+        changeHeight(element, container)
+    });
+}
+
+
+// ==================================================================
+// Читать далее
+// ==================================================================
+let tabParent = document.querySelectorAll('[data-more-parent]')
+
+if (tabParent) {
+    tabParent.forEach(function (parent) {
+        let table = parent.querySelector('[data-more]')
+        let button = parent.querySelector('[data-more-button]')
+        let icon = parent.querySelector('[data-svg-more]')
+        button.addEventListener('click', function () {
+            button.setAttribute('data-status', 'true')
+            if (table.style.display === 'none') {
+                table.style.display = 'inline'
+                button.textContent = 'Скрыть'
+                button.setAttribute('data-status', 'true')
+                icon.classList.add('open')
+            } else {
+                table.style.display = 'none'
+                button.textContent = 'читать далее'
+                button.setAttribute('data-status', 'false')
+                icon.classList.remove('open')
+            }
+
+        })
     })
+}
 
-})
 
+// ==============================================
+// Макска телефона без библиотеки
+// ==============================================
+let eventCalllback = function (e) {
+    let el = e.target,
+        clearVal = el.dataset.phoneClear,
+        pattern = el.dataset.phonePattern,
+        matrix_def = "+7(___) ___-__-__",
+        matrix = pattern ? pattern : matrix_def,
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = e.target.value.replace(/\D/g, "");
+    if (clearVal !== 'false' && e.type === 'blur') {
+        if (val.length < matrix.match(/([_\d])/g).length) {
+            e.target.value = '';
+            return;
+        }
+    }
+    if (def.length >= val.length) val = def;
+    e.target.value = matrix.replace(/./g, function (a) {
+        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+    });
+}
+let phone_inputs = document.querySelectorAll('input[type="tel"]');
+for (let elem of phone_inputs) {
+    for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, eventCalllback);
+    }
+}

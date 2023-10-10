@@ -19,4 +19,12 @@
     --menu-color: #fff
   }
 
+  .link-change {
+    --color: #fff
+  }
+
+  .popular__link:hover .link-change{
+    --color: rgba(0, 188, 188, 1)
+  }
+
 }

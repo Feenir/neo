@@ -45,6 +45,8 @@
         background-position: top 36px left 24px
     &:nth-child(1)
       background-image: url("../images/plus/1.svg")
+      & .plus__item-text
+        max-width: 380px
     &:nth-child(2)
       background-image: url("../images/plus/2.svg")
       background-size: 160px
@@ -68,6 +70,21 @@
   &__item-text
     margin-bottom: 12px
 
+  &__button-inner
+    display: flex
+    align-items: center
+
   &__more
     @include color-text($more-color)
+
+  &__text-hidden
+    display: none
+
+  &__arrow-more
+    max-width: 12px
+    max-height: 16px
+    margin-left: 12px
+    transition: transform .4s
+    &.open
+      transform: rotate(180deg)
 
